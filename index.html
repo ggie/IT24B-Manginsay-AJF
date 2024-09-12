@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+import javax.swing.JOptionPane;
+import java.util.Arrays;
+
+public class JavaApplication19 {
+
+    public static void main(String[] args) {
+
+        String[] names = {"Zara", "Alex", "John", "Elena", "David"};
+
+        Arrays.sort(names);
+
+        System.out.println("Names in alphabetical order(using Arrays.toString()):");
+        System.out.println(Arrays.toString(names));
+
+        String inputName
+                = JOptionPane.showInputDialog("Enter a name to search on the arrays:");
+
+        boolean found = false;
+
+        for (int i = 0; i < names.length; i++) {
+            if (names[i].equalsIgnoreCase(inputName)) {
+                JOptionPane.showMessageDialog(null, "Name found at index " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            JOptionPane.showMessageDialog(null, "Name not found.");
+        }
+    }
+}
