@@ -8,4 +8,158 @@
 <body>
     
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobiography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 1em;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .container {
+            padding-top: 80px;
+        }
+        .button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            display: none;
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s;
+        }
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+        .content.fade-out {
+            opacity: 0;
+            display: none;
+        }
+        .quotes {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .quotes blockquote {
+            font-size: 1.25em;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        .close-button {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .close-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Autobiography</h1>
+    </header>
+
+    <div class="container">
+        <button class="button" onclick="showContent('aboutMe')">About Me</button>
+        <button class="button" onclick="showContent('contact')">How to Reach Out</button>
+
+        <div id="aboutMe" class="content">
+            <h2>About Me</h2>
+            <p>I'm Auggie, I'm currently 69 years old. I live in Tokyo, Japan. Currently studying Bachelor of Science in Ka-qtan.</p>
+            <button class="close-button" onclick="closeContent()">Close Info</button>
+        </div>
+
+        <div id="contact" class="content">
+            <h2>Contact</h2>
+            <p>You can reach out to me via email at: <a href="mailto:imsopogihehe@gmail.com">imsopogihehe@gmail.com</a></p>
+            <button class="close-button" onclick="closeContent()">Close Info</button>
+        </div>
+
+        <div class="quotes">
+            <blockquote>
+                "The only way to do great work is to love what you do." - Steve Jobs
+            </blockquote>
+            <blockquote>
+                "In the end, we will remember not the words of our enemies, but the silence of our friends." - Martin Luther King Jr.
+            </blockquote>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            // Hide all content divs
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+                content.classList.add('fade-out');
+            });
+
+            // Show the selected content
+            var selectedContent = document.getElementById(id);
+            selectedContent.classList.remove('fade-out');
+            selectedContent.classList.add('active');
+        }
+
+        function closeContent() {
+            // Hide all content divs
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+                content.classList.add('fade-out');
+            });
+        }
+    </script>
+</body>
 </html>
