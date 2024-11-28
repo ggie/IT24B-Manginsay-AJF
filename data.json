@@ -30,5 +30,19 @@
             "bio": "A creative mind bringing fresh ideas to the table.",
             "image": "images/fo.jpg"
         }
+    ],
+    "faqs": [
+        {
+            "question": "What services do you offer?",
+            "answer": "We provide IT solutions, business consultations, and system integration."
+        },
+        {
+            "question": "Where are you located?",
+            "answer": "Our head office is in Makati City, Philippines."
+        },
+        {
+            "question": "How can I get started?",
+            "answer": "Contact us through our website or email for a free consultation."
+        }
     ]
 }

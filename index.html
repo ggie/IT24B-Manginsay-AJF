@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUG Inc.</title>
+    <title>AUG Inc. - Innovating the Future</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">AUG Inc.</a>
@@ -24,12 +25,41 @@
         </div>
     </nav>
 
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Welcome to AUG Inc.</h1>
-        <p>Innovating Your Business for the Future</p>
-    </header>
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/banner.jpg" class="d-block w-100" alt="Company Vision">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Innovating the Future</h5>
+                    <p>Your trusted partner in success.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/team.jpg" class="d-block w-100" alt="Team Collaboration">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Collaboration at Its Best</h5>
+                    <p>Empowering your business with teamwork.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-    <div class="container my-5">
+    <!-- Scroll Button -->
+    <div class="text-center my-4">
+        <a href="#mission" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Mission Section -->
+    <div id="mission" class="container my-5">
         <h2 class="text-center">Our Mission</h2>
         <p class="text-center">
             To revolutionize industries with creative and efficient solutions, ensuring business growth and client satisfaction.
