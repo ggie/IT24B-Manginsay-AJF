@@ -1,19 +1,34 @@
 {
-    "services": [
+    "team": [
         {
-            "title": "Web Development",
-            "description": "We create responsive and user-friendly websites to grow your business.",
-            "icon": "🌐"
+            "name": "Auggie John Fred Manginsay",
+            "role": "CEO & Founder",
+            "bio": "The visionary leader behind AUG Inc., driving innovation and growth.",
+            "image": "images/auggie_ceo.jpg"
         },
         {
-            "title": "Digital Marketing",
-            "description": "Boost your online presence with our marketing expertise.",
-            "icon": "📈"
+            "name": "Auggie Batumbakal",
+            "role": "Secretary",
+            "bio": "Ensures smooth operations with a focus on detail and efficiency.",
+            "image": "images/auggie_sec.jpg"
         },
         {
-            "title": "Consulting",
-            "description": "Get expert advice tailored to your unique needs.",
-            "icon": "💼"
+            "name": "John Frediee",
+            "role": "Staff Member",
+            "bio": "Specialist in operational excellence and customer service.",
+            "image": "images/john.jpg"
+        },
+        {
+            "name": "Cliffy Duesy",
+            "role": "Staff Member",
+            "bio": "Focused on building innovative systems for client success.",
+            "image": "images/cliffy.jpg"
+        },
+        {
+            "name": "Fo Giako",
+            "role": "Staff Member",
+            "bio": "A creative mind bringing fresh ideas to the table.",
+            "image": "images/fo.jpg"
         }
     ]
 }
