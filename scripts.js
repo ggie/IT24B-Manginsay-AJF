@@ -1,4 +1,3 @@
-// Dynamically load services from JSON
 document.addEventListener("DOMContentLoaded", () => {
     const servicesContainer = document.getElementById("services");
 
