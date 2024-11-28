@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "title": "Web Development",
+            "description": "We create responsive and user-friendly websites to grow your business.",
+            "icon": "🌐"
+        },
+        {
+            "title": "Digital Marketing",
+            "description": "Boost your online presence with our marketing expertise.",
+            "icon": "📈"
+        },
+        {
+            "title": "Consulting",
+            "description": "Get expert advice tailored to your unique needs.",
+            "icon": "💼"
+        }
+    ]
+}
