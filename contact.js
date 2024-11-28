@@ -12,8 +12,8 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     }
 });
 
-function initMap() {
-    const map = L.map('map').setView([8.359639, 124.869179], 18);
+document.addEventListener("DOMContentLoaded", function () {
+    const map = L.map('map').setView([8.359639, 124.869179], 18);  // Set the default view
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -27,8 +27,6 @@ function initMap() {
 
     locations.forEach(location => {
         const marker = L.marker([location.latitude, location.longitude]).addTo(map);
-        marker.bindPopup(`<p>${location.message}</p>`);
+        marker.bindPopup(`<p>${location.message}</p>`);  // Show message on click
     });
-}
-
-window.onload = initMap;
+});
