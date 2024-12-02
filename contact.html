@@ -5,112 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - AUG Inc.</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <style>
-        .zoom-message {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            display: none;
-            z-index: 999;
-            text-align: center; 
-        }
-
-        #map {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">AUG Inc.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    <header class="bg-primary text-white text-center py-5">
+    <section class="contact-section">
         <h1>Contact Us</h1>
-        <p>We’d love to hear from you.</p>
-    </header>
-
-    <div class="container my-5">
-        <form id="contact-form">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required id="name">
+            <input type="email" placeholder="Your Email" required id="email">
+            <textarea placeholder="Your Message" required id="message"></textarea>
+            <button type="submit">Send Message</button>
         </form>
-    </div>
+        <p id="responseMessage" style="display: none; color: green;">Message sent! Please wait for a response.</p>
+    </section>
 
-    <div class="container my-5">
-        <h2 class="text-center">Find Us</h2>
-        <div id="map"></div> <div class="zoom-message" id="zoomMessage">Use Ctrl + Scroll to Zoom</div>
-    </div>
-
-    <footer class="bg-dark text-white text-center py-3">
+    <footer>
         <p>&copy; 2024 AUG Inc. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/contact.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var map = L.map('map', {
-                zoomControl: true,
-                scrollWheelZoom: true 
-            }).setView([8.359639, 124.869179], 18);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            L.marker([8.359639, 124.869179]).addTo(map)
-                .bindPopup("<b>CCS Laboratory 1</b><br>Our main laboratory.")
-                .openPopup();
-
-            var zoomMessage = document.getElementById("zoomMessage");
-
-            map.getContainer().addEventListener('mouseleave', function() {
-                zoomMessage.style.display = "block";
-            });
-
-          
-            map.getContainer().addEventListener('mouseenter', function() {
-                zoomMessage.style.display = "none";
-            });
-
-            setTimeout(function() {
-                zoomMessage.style.display = "block";
-            }, 500);
-        });
-    </script>
 </body>
 </html>

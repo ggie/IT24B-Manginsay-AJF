@@ -1,8 +1,14 @@
-fetch('js/data.json')
-    .then(response => response.json())
-    .then(data => {
-        const servicesContainer = document.getElementById('service-list');
+// Inheritance
+class ServiceDataFetcher extends DataFetcher {
+    constructor(url) {
+        super(url); // Inheriting 
+    }
 
+    async loadServices() {
+        const data = await this.fetchData(); // Using inherited method
+        const servicesContainer = document.getElementById('service-list');
+        
+        // Encapsulation
         data.services.forEach(service => {
             const serviceCard = `
                 <div class="col-md-4">
@@ -17,4 +23,5 @@ fetch('js/data.json')
             `;
             servicesContainer.innerHTML += serviceCard;
         });
-    });
+    }
+}

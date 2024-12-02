@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "title": "IT Solutions",
+            "description": "Comprehensive IT solutions for businesses of all sizes.",
+            "image": "images/it-solutions.jpg"
+        },
+        {
+            "title": "Business Consultation",
+            "description": "Expert advice to streamline your business operations.",
+            "image": "images/business-consultation.jpg"
+        },
+        {
+            "title": "System Integration",
+            "description": "Seamless integration of technology for optimized performance.",
+            "image": "images/system-integration.jpg"
+        }
+    ]
+}
